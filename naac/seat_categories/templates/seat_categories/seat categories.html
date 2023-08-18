@@ -1,0 +1,55 @@
+{% extends 'temp/principle.html.' %}
+{% block  base %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+<h1>2.1.2 number of seats filled against seats reserved for various categories(SC,ST,OBC,Divyangjan,etc.as per applicable reservation policy during the year (exclusive of supernumerary seats)</h1>
+<table border="2">
+	<tr>
+		<td rowspan="2">Year</td><br>
+		<td colspan="5">number of seats earmarked for reserved  for reserved category as per GOI or state goverment rule</td>
+		<td colspan="5">number of students admitted from the reserved category</td>
+	</tr>
+	<tr>
+		<td>sc</td>
+		<td>st</td>
+		<td>obc</td>
+		<td>gen</td>
+		<td>others</td>
+
+		<td>sc</td>
+		<td>st</td>
+		<td>obc</td>
+		<td>gen</td>
+		<td>others</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="year" checked=""></td>
+		<td><input type="text" name="ta"></td>
+		<td><input type="text" name="tb"></td>
+		<td><input type="text" name="tc"></td>
+		<td><input type="text" name="td"></td>
+		<td><input type="text" name="te"></td>
+		<td><input type="text" name="tf"></td>
+		<td><input type="text" name="tg"></td>
+		<td><input type="text" name="th"></td>
+		<td><input type="text" name="ti"></td>
+		<td><input type="text" name="tj"></td>
+	</tr></table>
+description:<input type="file" required=""><br>
+<input type="submit" value="submit"><br>
+         <a href="/static/seat_categories.xlsx/">download</a>
+
+
+</body>
+</form>
+</html>
+{% endblock %}

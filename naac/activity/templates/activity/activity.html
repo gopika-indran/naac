@@ -1,0 +1,59 @@
+{% extends 'temp/department.html.' %}
+{% block  base %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3.5.1</title>
+</head>
+<body>
+<h1>3.5.1 Number of Collaborative activities for  research, Faculty exchange, Student exchange/ internship during the year	</h1><br>
+<form method="post">
+ {% csrf_token %}
+    <table>
+        <tr>
+            <td>Sl. No.:</td>
+            <td><input type="number" name="sn" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Title of the collaborative activity:</td>
+            <td><input type="text" name="tc" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Name of the collaborating agency with contact details:</td>
+            <td><input type="text" name="nc" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Name of the participant:</td>
+            <td><input type="text" name="np" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Year of collaboration:</td>
+            <td><input type="number" name="yc" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Duration:</td>
+            <td><input type="text" name="dr" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Nature of the activity:</td>
+            <td><input type="text" name="nc" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Link to the relavant document:</td>
+            <td><input type="text" name="lr" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><input type="file" required="" class="form-control"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit" class="btn btn-primary">
+                <a href="/static/activity.xlsx" class="btn btn-success">download</a></td></tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

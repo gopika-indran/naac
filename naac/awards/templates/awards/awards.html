@@ -1,0 +1,67 @@
+{% extends 'temp/teacher.html.' %}
+{% block  base %}
+
+
+
+<html>
+<head>
+	<title>
+	3.3.3</title></head>
+	<body><h1>3.3.3 Number of books and chapters in edited volumes/books published and papers published in national/ international conference proceedings per teacher during year</h1><br>
+	<form method="post"><br>
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Sl. No.:</td>
+                <td><input type="number" name="sn" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Name of the teacher:</td>
+                <td><input type="text" name="nt" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Title of the book/chapters  published:</td>
+                <td><input type="text" name="tb" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Title of the paper:</td>
+                <td><input type="text" name="tp" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Title of the proceedings of the conference:</td>
+                <td><input type="text" name="tpc" required="" class="form-control"></td>
+            </tr>
+            <tr>
+	<td>Name of the conference:</td>
+                <td><input type="text" name="tc" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>National / International:</td>
+                <td><input type="text" name="ni" required="" class="form-control"></td>
+            </tr>
+            <tr>
+	<td>Year of publication:</td>
+                <td><input type="number" name="yp" required="" class="form-control"></td>
+            </tr>
+            <tr>
+	<td>ISBN/ISSN number of the proceeding:</td>
+               <td><input type="number" name="np" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Affiliating Institute at the time of publication:</td>
+               <td> <input type="text" name="ai" required="" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Name of the publisher:</td>
+                <td><input type="text" name="nop" required="" class="form-control"></td>
+            </tr>
+            <tr>
+            <td></td>
+	<td><input type="submit" value="submit" class="btn btn-primary">
+         <a href="/static/awards.xlsx/" class="btn btn-success">download</a></td></tr>
+	
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

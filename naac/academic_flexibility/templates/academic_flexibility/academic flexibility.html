@@ -1,0 +1,53 @@
+{% extends 'temp/student_related.html.' %}
+{% block  base %}
+
+
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2><center>Key Indicator - 1.2 Academic Flexibility</center></h2>
+    <h3>1.2.1 Number of Programmes in which Choice Based Credit System (CBCS)/ elective
+course system has been implemented</h3><br><br>
+<form method="post">
+    {% csrf_token %}
+	<table>
+
+		<tr>
+			<th>Program Code:</th>
+			<td><input type="text" name="pc" required="" class="form-control">
+			</td>
+		</tr>
+		<tr>
+			<th>Programme Name:</th>
+			<td><input type="text" name="pn" required="" class="form-control"></td></tr>
+			<tr>
+				<th>Year of Intoduction:</th>
+				<td><input type="number" name="yi" required="" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Status of Implemetation of CBCS/elective course system(Yes/No)</th>
+				<td><input type="text" name="yn" required="" class="form-control"></td>
+			</tr>
+			<tr>
+				<th>Link of the relevant Document :</th>
+				<td><input type="text" name="doc" required="" class="form-control"></td>
+			</tr>
+        <tr>
+			<th>Documents</th>
+			<td><input type="file" name="doc1" required="" class="form-control"></td>
+        </tr>
+			<tr>
+                <td></td>
+                <td><input type="submit" name="s" class="btn btn-primary">
+                <a href="/static/academic_flexibility.xlsx/" class="btn btn-success">download</a></td>
+            </tr>
+
+
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

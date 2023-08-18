@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3.1.2</title>
+</head>
+<body>
+	<form method="post">
+        {% csrf_token %}
+<h2>3.1.2 Number  of teachers recognized as research guides (latest completed academic year)</h2><br>
+Name  of full time teacher with Ph.D./D.M/M.Ch./D.N.B Superspeciality/D.Sc./D’Lit.:<input type="text" name="ft" required=""><br>
+Qualification (Ph.D./D.M/M.Ch./D.N.B Superspeciality/D.Sc./D’Lit. ) and Year of obtaining:<input type="text" name="yo" required=""><br>
+Whether recognised as research Guide for Ph.D./D.M/M.Ch./D.N.B Superspeciality/D.Sc./D’Lit.:<input type="text" name="rr" required=""><br>
+Year of Recognition as Research Guide:<input type="number" name="rg" required=""><br>
+Is the teacher still serving the institution/If not last year of the service of Faculty to the Institution:<input type="text" name="sf" required=""><br>
+Name of the scholar:<input type="text" name="ns" required=""><br>
+Year of registration of the scholar:<input type="number" name="rs" required=""><br>
+Title of the thesis for scholar:<input type="text" name="ts" required=""><br>
+<input type="file" required=""><br>
+<input type="submit" value="submit">
+         <a href="/static/teaching_quality.xlsx/">download</a>
+    </form>
+</body>
+</html>

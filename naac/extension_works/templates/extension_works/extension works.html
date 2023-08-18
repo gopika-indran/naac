@@ -1,0 +1,50 @@
+{% extends 'temp/teacher.html.' %}
+{% block  base %}
+
+
+
+<html>
+<head><title>3.4</title></head>
+<body>
+<h1>KEY INDICATOR 3.4-EXTENSION ACTIVITES</h1><br>
+<h3>3.4.1 Extension activites are carried out in the neibhourhood community,senzitizing students to social issues,for their holistic devolepment,and impact thereof during the years</h3><br>
+<form method="post">
+    {% csrf_token %}
+    <table>
+<tr>
+    <td>description:</td>
+    <td><input type="file"></td>
+</tr>
+        <tr>
+            <td></td>
+<td><input type="submit"></td>
+        </tr>
+    </table>
+<h3>3.4.2 number of awards and recognitions recieved for extension activites from government recognized bodies during the year</h3><br>
+    <table>
+        <tr>
+            <td>Name of the activity:</td>
+            <td><input type="text" name="na" required=""></td>
+        </tr>
+        <tr>
+            <td>Name of the award/recognition:</td>
+            <td><input type="text" name="wr" required=""></td>
+        </tr>
+        <tr>
+            <td>Name of the awarding government/government recognised bodies:</td>
+            <td><input type="text" name="gr" required=""></td>
+        </tr>
+        <tr>
+            <td>year of award:</td>
+            <td><input type="number" name="oa" required=""></td>
+        </tr>
+        <tr>
+
+<td><input type="file" required=""></td>
+<td><input type="submit" value="submit">
+    <a href="/static/extension_works.xlsx/">download</a></td></tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

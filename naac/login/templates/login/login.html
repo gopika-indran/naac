@@ -1,0 +1,17 @@
+{% extends 'temp/home.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+</head>
+<form method="post">
+    {% csrf_token %}
+<body><center><h1>login</h1></center>
+username:<input type="text" name="un"><br>
+password:<input type="text" name="pw"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+{% endblock %}
